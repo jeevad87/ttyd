@@ -1,10 +1,3 @@
-![backend](https://github.com/tsl0922/ttyd/workflows/backend/badge.svg)
-![frontend](https://github.com/tsl0922/ttyd/workflows/frontend/badge.svg)
-[![GitHub Releases](https://img.shields.io/github/downloads/tsl0922/ttyd/total)](https://github.com/tsl0922/ttyd/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/tsl0922/ttyd)](https://hub.docker.com/r/tsl0922/ttyd)
-[![Packaging status](https://repology.org/badge/tiny-repos/ttyd.svg)](https://repology.org/project/ttyd/versions)
-![GitHub](https://img.shields.io/github/license/tsl0922/ttyd)
-
 # ttyd - Share your terminal over the web
 
 ttyd is a simple command-line tool for sharing terminal over the web.
@@ -13,48 +6,23 @@ ttyd is a simple command-line tool for sharing terminal over the web.
 
 # Features
 
-- Built on top of [libuv](https://libuv.org) and [WebGL2](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) for speed
-- Fully-featured terminal with [CJK](https://en.wikipedia.org/wiki/CJK_characters) and IME support
-- [ZMODEM](https://en.wikipedia.org/wiki/ZMODEM) ([lrzsz](https://ohse.de/uwe/software/lrzsz.html)) / [trzsz](https://trzsz.github.io) file transfer support
-- [Sixel](https://en.wikipedia.org/wiki/Sixel) image output support ([img2sixel](https://saitoha.github.io/libsixel) / [lsix](https://github.com/hackerb9/lsix))
-- SSL support based on [OpenSSL](https://www.openssl.org) / [Mbed TLS](https://github.com/Mbed-TLS/mbedtls)
-- Run any custom command with options
-- Basic authentication support and many other custom options
-- Cross platform: macOS, Linux, FreeBSD/OpenBSD, [OpenWrt](https://openwrt.org), Windows
-
 > ❤ Special thanks to [JetBrains](https://www.jetbrains.com/?from=ttyd) for sponsoring the opensource license to this project.
 
 # Installation
 
-## Install on macOS
-
-- Install with [Homebrew](http://brew.sh): `brew install ttyd`
-- Install with [MacPorts](https://www.macports.org): `sudo port install ttyd`
-
 ## Install on Linux
 
 - Binary version (recommended): download from the [releases](https://github.com/tsl0922/ttyd/releases) page
-- Install with [Homebrew](https://docs.brew.sh/Homebrew-on-Linux) : `brew install ttyd`
-- Install the snap: `sudo snap install ttyd --classic`
-- Build from source (debian/ubuntu):
+- Build from source (ROCKY 9):
     ```bash
-    sudo apt-get update
-    sudo apt-get install -y build-essential cmake git libjson-c-dev libwebsockets-dev
-    git clone https://github.com/tsl0922/ttyd.git
-    cd ttyd && mkdir build && cd build
-    cmake ..
-    make && sudo make install
-    ```
-    You may also need to compile/install [libwebsockets](https://libwebsockets.org) from source if the `libwebsockets-dev` package is outdated.
-- Install on OpenWrt: `opkg install ttyd`
-- Install on Gentoo: clone the [repo](https://bitbucket.org/mgpagano/ttyd/src/master) and follow the directions [here](https://wiki.gentoo.org/wiki/Custom_repository#Creating_a_local_repository).
-
-## Install on Windows
-
-- Binary version (recommended): download from the [releases](https://github.com/tsl0922/ttyd/releases) page
-- Install with [WinGet](https://github.com/microsoft/winget-cli): `winget install tsl0922.ttyd`
-- Install with [Scoop](https://scoop.sh/#/apps?q=ttyd&s=2&d=1&o=true): `scoop install ttyd`
-- [Compile on Windows](https://github.com/tsl0922/ttyd/wiki/Compile-on-Windows)
+  dnf config-manager --set-enabled crb
+  dnf install epel-release
+  dnf makecache
+  dnf install -y cmake git  json-c-devel libwebsockets-devel gcc zlib-devel
+  git clone https://github.com/jeevad87/ttyd.git
+  cd ttyd && mkdir build && cd build
+  cmake ..
+  make && sudo make install
 
 # Usage
 
