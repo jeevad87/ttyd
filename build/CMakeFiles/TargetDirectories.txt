@@ -1,0 +1,7 @@
+/root/ttyd/build/CMakeFiles/ttyd.dir
+/root/ttyd/build/CMakeFiles/edit_cache.dir
+/root/ttyd/build/CMakeFiles/rebuild_cache.dir
+/root/ttyd/build/CMakeFiles/list_install_components.dir
+/root/ttyd/build/CMakeFiles/install.dir
+/root/ttyd/build/CMakeFiles/install/local.dir
+/root/ttyd/build/CMakeFiles/install/strip.dir
